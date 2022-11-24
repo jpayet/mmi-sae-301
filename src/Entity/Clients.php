@@ -13,7 +13,7 @@ class Clients implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private ?int $client_id = null;
 
     #[ORM\Column]
     private array $roles = [];
@@ -23,6 +23,18 @@ class Clients implements UserInterface, PasswordAuthenticatedUserInterface
      */
     #[ORM\Column]
     private ?string $password = null;
+
+    #[ORM\Column(length: 50)]
+    private ?string $client_email = null;
+
+    #[ORM\Column(length: 30, nullable: true)]
+    private ?string $client_adr_rue = null;
+
+    #[ORM\Column(length: 30, nullable: true)]
+    private ?string $client_adr_ville = null;
+
+    #[ORM\Column(length: 5, nullable: true)]
+    private ?string $client_adr_cp = null;
 
     public function getId(): ?string
     {
@@ -87,5 +99,53 @@ class Clients implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getClientAdrRue(): ?string
+    {
+        return $this->client_adr_rue;
+    }
+
+    public function setClientAdrRue(?string $client_adr_rue): self
+    {
+        $this->client_adr_rue = $client_adr_rue;
+
+        return $this;
+    }
+
+    public function getClientAdrVille(): ?string
+    {
+        return $this->client_adr_ville;
+    }
+
+    public function setClientAdrVille(?string $client_adr_ville): self
+    {
+        $this->client_adr_ville = $client_adr_ville;
+
+        return $this;
+    }
+
+    public function getClientAdrCp(): ?string
+    {
+        return $this->client_adr_cp;
+    }
+
+    public function setClientAdrCp(?string $client_adr_cp): self
+    {
+        $this->client_adr_cp = $client_adr_cp;
+
+        return $this;
     }
 }
