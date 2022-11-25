@@ -90,3 +90,16 @@ footer li a{
 }
 
 /*---- CARD MANIFS ----*/
+.manifs-card{
+    background-color: #dedede;
+    padding: 20px;
+    display: flex;
+}
+
+.manifs-card img{
+    height: 25px;
+}
+
+.card-infos{
+
+}
