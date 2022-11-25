@@ -1,20 +1,28 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BilleterieController!{% endblock %}
+{% block title %}Billeterie{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+{% block h1 %}BILLETERIE{% endblock %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+{% block entete %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/sae-301/src/Controller/BilleterieController.php'|file_link(0) }}">src/Controller/BilleterieController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/sae-301/templates/billeterie/index.html.twig'|file_link(0) }}">templates/billeterie/index.html.twig</a></code></li>
-    </ul>
-</div>
+{% endblock %}
+
+{% block affichagPrincipale %}
+    <div class="manifs-card">
+        <div class="affiche"><img src="" alt=""></div>
+        <div>
+            <div class="infos">
+                <p>SHAKAPONK</p>
+                <p>12/12/2022</p>
+                <p>20H45</p>
+            </div>
+            <div class="infos">
+                <p>THEATRE DE BELLE SEINE</p>
+                <p>35.90€</p>
+            </div>
+            <button>CONSULTER L'EVENEMENT</button>
+        </div>
+
+    </div>
 {% endblock %}
