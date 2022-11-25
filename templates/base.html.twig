@@ -35,15 +35,35 @@
                 </div>
             </nav>
         </header>
-        {% block body %}
-            <div>
-                <div class="entete"></div>
-                <h1>{% block h1 %}TITRE DE LA PAGE{% endblock %}</h1>
-                <hr class="thr">
-                {% block nav-entete %}
-            </div>
 
-            </main>
-        {% endblock %}
+        <div class="entete">
+            <div>
+            <h1>{% block h1 %}TITRE DE LA PAGE{% endblock %}</h1>
+            <div class="trait"></div>
+            </div>
+            <div>{% block entete %}{% endblock %}</div>
+        </div>
+        <main>
+            {% block affichagPrincipale %}{% endblock %}
+        </main>
+        {% block ssSection %}{% endblock %}
+
+        <footer>
+            <div class="liens">
+                <ul>
+                    <li><a href="#">CGU</a></li>
+                    <li><a href="#">Mentions Légales</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Politique de Confidentialitées</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p>Copyright. Tous droits réservés. 2022 - Ville de Roubaix. </p>
+        </footer>
     </body>
 </html>
