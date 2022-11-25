@@ -37,12 +37,17 @@
         </header>
 
         <div class="entete">
-            <div>
-            <h1>{% block h1 %}TITRE DE LA PAGE{% endblock %}</h1>
-            <div class="trait"></div>
+            <div class="ln-entete">
+                <div>
+                    <h1>{% block h1 %}TITRE DE LA PAGE{% endblock %}</h1>
+                </div>
+                <div>
+                    {% block entete %}{% endblock %}
+                </div>
             </div>
-            <div>{% block entete %}{% endblock %}</div>
+            <div class="trait"></div>
         </div>
+
         <main>
             {% block affichagPrincipale %}{% endblock %}
         </main>
