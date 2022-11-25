@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <script src="https://kit.fontawesome.com/809b55cd38.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -14,6 +16,34 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header>
+            <nav>
+                <p>LOGO</p>
+                <div class="navbar main-nav">
+                    <ul>
+                        <li><i class="fa-solid fa-house"></i><a href="accueil">Accueil</a></li>
+                        <li><i class="fa-solid fa-ticket"></i><a href="billeterie">Billeterie</a></li>
+                        <li><i class="fa-solid fa-masks-theater"></i><a href="salles">Nos Salles</a></li>
+                        <li><i class="fa-solid fa-phone"></i><a href="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar user-nav">
+                    <ul>
+                        <li><a href="profil"><i class="fa-solid fa-user"></i></a></li>
+                        <li><a href="panier"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        {% block body %}
+            <div>
+                <div class="entete"></div>
+                <h1>{% block h1 %}TITRE DE LA PAGE{% endblock %}</h1>
+                <hr class="thr">
+                {% block nav-entete %}
+            </div>
+
+            </main>
+        {% endblock %}
     </body>
 </html>
