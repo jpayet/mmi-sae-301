@@ -5,23 +5,66 @@
 {% block h1 %}BILLETERIE{% endblock %}
 
 {% block entete %}
-
+    <form method="" action="">
+        <div class="searchbar">
+            <input type="search" placeholder="Rechercher" id="searchbar" />
+            <button id="loupe" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </form>
 {% endblock %}
 
 {% block affichagPrincipale %}
+    <section class="cards">
     <div class="manifs-card">
-        <div class="affiche"><img src="{{ asset('img/shakaponk.img') }}" alt=""></div>
-        <div>
+        <div class="affiche"><img src="{{ asset('img/shakaponk.jpg') }}" alt="affiche"></div>
+        <div class="manifs-data">
             <div class="card-infos">
                 <p>SHAKAPONK</p>
                 <p>12/12/2022</p>
                 <p>20H45</p>
             </div>
-            <div class="infos">
+            <div class="card-infos2">
                 <p>THEATRE DE BELLE SEINE</p>
                 <p>35.90€</p>
             </div>
-            <button>CONSULTER L'EVENEMENT</button>
+            <div class="card-infos-bt">
+                <a href="#">RESERVER</a>
+            </div>
         </div>
     </div>
+    <div class="manifs-card">
+        <div class="affiche"><img src="{{ asset('img/shakaponk.jpg') }}" alt="affiche"></div>
+            <div class="manifs-data">
+                <div class="card-infos">
+                    <p>SHAKAPONK</p>
+                    <p>12/12/2022</p>
+                    <p>20H45</p>
+                </div>
+                <div class="card-infos2">
+                    <p>THEATRE DE BELLE SEINE</p>
+                    <p>35.90€</p>
+                </div>
+                <div class="card-infos-bt">
+                    <a href="#">RESERVER</a>
+                </div>
+            </div>
+    </div>
+        <div class="manifs-card">
+            <div class="affiche"><img src="{{ asset('img/shakaponk.jpg') }}" alt="affiche"></div>
+            <div class="manifs-data">
+                <div class="card-infos">
+                    <p>SHAKAPONK</p>
+                    <p>12/12/2022</p>
+                    <p>20H45</p>
+                </div>
+                <div class="card-infos2">
+                    <p>THEATRE DE BELLE SEINE</p>
+                    <p>35.90€</p>
+                </div>
+                <div class="card-infos-bt">
+                    <a href="#">RESERVER</a>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
