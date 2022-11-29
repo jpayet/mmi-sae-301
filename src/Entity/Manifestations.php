@@ -20,7 +20,7 @@ class Manifestations
     #[ORM\Column(length: 5000, nullable: true)]
     private ?string $manif_description = null;
 
-    #[ORM\Column(length: 100, nullable: true)]
+    #[ORM\Column(length: 200, nullable: true)]
     private ?string $manif_casting = null;
 
     #[ORM\Column(length: 50, nullable: true)]
