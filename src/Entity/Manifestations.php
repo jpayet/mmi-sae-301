@@ -12,22 +12,22 @@ class Manifestations
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $manif_id = null;
+    private ?int $id = null;
 
-    #[ORM\Column(length: 30)]
+    #[ORM\Column(length: 60)]
     private ?string $manif_titre = null;
 
-    #[ORM\Column(length: 120, nullable: true)]
+    #[ORM\Column(length: 5000, nullable: true)]
     private ?string $manif_description = null;
 
-    #[ORM\Column(length: 60, nullable: true)]
+    #[ORM\Column(length: 200, nullable: true)]
     private ?string $manif_casting = null;
 
     #[ORM\Column(length: 50, nullable: true)]
     private ?string $manif_affiche = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $manif_heure = null;
+    #[ORM\Column(length: 5)]
+    private ?string $manif_heure = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $manif_date = null;
@@ -35,19 +35,22 @@ class Manifestations
     #[ORM\Column]
     private ?float $manif_prix = null;
 
+    #[ORM\ManyToOne(inversedBy: 'manifestations')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Lieux $lieu_id = null;
+
+    #[ORM\ManyToOne(inversedBy: 'manifestations')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Genres $genre_id = null;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getManifId(): ?int
+    public function setId(int $id): self
     {
-        return $this->manif_id;
-    }
-
-    public function setManifId(int $manif_id): self
-    {
-        $this->manif_id = $manif_id;
+        $this->id = $id;
 
         return $this;
     }
@@ -112,12 +115,12 @@ class Manifestations
         return $this;
     }
 
-    public function getManifHeure(): ?\DateTimeInterface
+    public function getManifHeure(): ?string
     {
         return $this->manif_heure;
     }
 
-    public function setManifHeure(\DateTimeInterface $manif_heure): self
+    public function setManifHeure(?string $manif_heure): self
     {
         $this->manif_heure = $manif_heure;
 
@@ -144,6 +147,30 @@ class Manifestations
     public function setManifPrix(float $manif_prix): self
     {
         $this->manif_prix = $manif_prix;
+
+        return $this;
+    }
+
+    public function getLieuId(): ?Lieux
+    {
+        return $this->lieu_id;
+    }
+
+    public function setLieuId(?Lieux $lieu_id): self
+    {
+        $this->lieu_id = $lieu_id;
+
+        return $this;
+    }
+
+    public function getGenreId(): ?Genres
+    {
+        return $this->genre_id;
+    }
+
+    public function setGenreId(?Genres $genre_id): self
+    {
+        $this->genre_id = $genre_id;
 
         return $this;
     }

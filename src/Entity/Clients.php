@@ -4,16 +4,18 @@ namespace App\Entity;
 
 use App\Repository\ClientsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: ClientsRepository::class)]
+#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
 class Clients implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $client_id = null;
+    private ?int $id = null;
 
     #[ORM\Column]
     private array $roles = [];
@@ -25,7 +27,7 @@ class Clients implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $password = null;
 
     #[ORM\Column(length: 50)]
-    private ?string $client_email = null;
+    private ?string $email = null;
 
     #[ORM\Column(length: 30, nullable: true)]
     private ?string $client_adr_rue = null;
@@ -106,7 +108,7 @@ class Clients implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->email;
     }
 
-    public function setEmail(string $email): self
+    public function setClientEmail(string $email): self
     {
         $this->email = $email;
 

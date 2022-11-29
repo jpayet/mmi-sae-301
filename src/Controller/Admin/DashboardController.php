@@ -2,7 +2,9 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Genres;
 use App\Entity\Lieux;
+use App\Entity\Manifestations;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -27,6 +29,8 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-        yield MenuItem::linkToCrud('Les Lieux', 'fas fa-list', Lieux::class);
+        yield MenuItem::linkToCrud('Manifestations', 'fas fa-list', Manifestations::class);
+        yield MenuItem::linkToCrud('Lieux', 'fas fa-list', Lieux::class);
+        yield MenuItem::linkToCrud('Genres', 'fas fa-list', Genres::class);
     }
 }
