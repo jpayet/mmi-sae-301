@@ -14,10 +14,14 @@
 {% endblock %}
 
 {% block affichagPrincipale %}
+
     <section class="cards">
+        {% set val= 0 %}
         {% for el in manifs %}
+        {% set val= val + 1 %}
+
         <div class="manifs-card">
-            <div class="affiche"><img src='{{ asset("uploads/#{el.manifAffiche}") }}' alt="affiche"></div>
+            <div class="affiche"><img src='{{ asset("uploads/manifs/#{el.manifAffiche}") }}' alt="affiche"></div>
             <div class="manifs-data">
                 <div class="card-infos">
                     <p>{{ el.manifTitre }}</p>
@@ -33,6 +37,19 @@
                 </div>
             </div>
         </div>
+
+
+            <div class="popup_container" id="{{val}}">
+                <div class="popup">
+                    <button class="pop-cross">hide popup</button>
+                    <div>
+                        <span id="article">{{el.manifTitre}}</span> - <span id="prix">{{el.manifPrix}}</span>€ <br>
+                        <input type="number" value="1" min="1" max="99" id="qte">
+                        <input type="hidden" id="id" value="{{el.getId}}">
+                        <button id="ajout">ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
         {% endfor %}
     </section>
 {% endblock %}
