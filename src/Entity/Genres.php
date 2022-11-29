@@ -72,4 +72,9 @@ class Genres
 
         return $this;
     }
+
+    public function __toString(): string
+    {
+        return $this->genre_titre;
+    }
 }

@@ -120,7 +120,7 @@ class Manifestations
         return $this->manif_heure;
     }
 
-    public function setManifHeure(\DateTimeInterface $manif_heure): self
+    public function setManifHeure(?string $manif_heure): self
     {
         $this->manif_heure = $manif_heure;
 
