@@ -29,16 +29,16 @@
                 <img src="{{ asset('img/logo.png') }}" alt="logo Roubaix culture">
                 <div class="navbar main-nav">
                     <ul>
-                        <li><i class="fa-solid fa-house"></i><a href="accueil">Accueil</a></li>
-                        <li><i class="fa-solid fa-ticket"></i><a href="billeterie">Billeterie</a></li>
-                        <li><i class="fa-solid fa-masks-theater"></i><a href="salles">Nos Salles</a></li>
-                        <li><i class="fa-solid fa-phone"></i><a href="contact">Contact</a></li>
+                        <li><i class="fa-solid fa-house"></i><a href="{{ path('app_accueil') }}">Accueil</a></li>
+                        <li><i class="fa-solid fa-ticket"></i><a href="{{ path('app_billeterie') }}">Billeterie</a></li>
+                        <li><i class="fa-solid fa-masks-theater"></i><a href="{{ path('app_salles') }}">Nos Salles</a></li>
+                        <li><i class="fa-solid fa-phone"></i><a href="{{ path('app_contact') }}">Contact</a></li>
                     </ul>
                 </div>
                 <div class="navbar user-nav">
                     <ul>
-                        <li><a href="profil"><i class="fa-solid fa-user"></i></a></li>
-                        <li><a href="panier"><i class="fa-solid fa-cart-shopping"></i><span id="panier"></span></a></li>
+                        <li><a href="{{ path('app_profil') }}"><i class="fa-solid fa-user"></i></a></li>
+                        <li><a href="{{ path('app_panier') }}"><i class="fa-solid fa-cart-shopping"></i><span id="panier"></span></a></li>
                     </ul>
                 </div>
             </nav>
