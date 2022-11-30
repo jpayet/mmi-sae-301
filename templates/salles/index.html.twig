@@ -1,20 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SallesController!{% endblock %}
+{% block title %}Nos Salles{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+{% block h1 %}Nos salles à Roubaix{% endblock %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+{% block affichagPrincipale %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/sae-301/src/Controller/SallesController.php'|file_link(0) }}">src/Controller/SallesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/sae-301/templates/salles/index.html.twig'|file_link(0) }}">templates/salles/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <section class="cards">
+        {% for salle in sallestab %}
+            <div class="salles-card">
+                <div class="affiche"><img src='{{ asset("uploads/manifs/#{salle.lieuAffiche}") }}' alt="affiche"></div>
+                <div class="salles-data">
+                    <h1>{{ salle.lieuNom }}</h1>
+                    <p>Nombre de place : {{ salle.lieuCapacite }}</p>
+                    <a href="salles/{{salle.Id}}">Lien vers la salle</a>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+
+    <div class="popupbox">
+        <div class="popupcontainer">
+            <button class="pop-cross">hide popup</button>
+            <div id="popcontent">
+
+            </div>
+        </div>
+    </div>
 {% endblock %}

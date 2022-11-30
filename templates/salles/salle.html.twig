@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block h1 %}{% endblock %}
+
+{% block affichagPrincipale %}
+    <p>{{ salle.lieuNom }}</p>
+    <p>{{ salle.getManifId.getManifTitre }}</p>
+{% endblock %}
