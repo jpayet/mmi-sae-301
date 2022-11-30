@@ -237,3 +237,13 @@ tbody{
     font-weight: 600;
 }
 
+.popupbox{
+    width: 80vw;
+    height: 300px;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    display: none;
+    background-color: white;
+}
+

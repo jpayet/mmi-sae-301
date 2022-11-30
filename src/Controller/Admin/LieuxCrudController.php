@@ -24,7 +24,7 @@ class LieuxCrudController extends AbstractCrudController
             TextField::new('lieu_nom'),
             TextField::new('lieu_adr'),
             NumberField::new('lieu_capacite'),
-            ImageField::new('lieu_affiche')->setBasePath('uploads/lieux/')->setUploadDir('public/uploads/'),
+            ImageField::new('lieu_affiche')->setBasePath('uploads/lieux/')->setUploadDir('public/uploads/lieux/'),
         ];
     }
 
