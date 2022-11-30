@@ -1,3 +1,6 @@
+document.querySelectorAll('.res-button')
+
+
 const crossup = document.querySelectorAll(".pop-cross") //on récupere toutes les croix de cloture
 const popcont = document.querySelectorAll(".popup_container")//on récupère toutes les pop ups
 

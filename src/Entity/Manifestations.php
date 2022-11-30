@@ -29,8 +29,8 @@ class Manifestations
     #[ORM\Column(length: 5)]
     private ?string $manif_heure = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $manif_date = null;
+    #[ORM\Column(length: 10)]
+    private ?string $manif_date = null;
 
     #[ORM\Column]
     private ?float $manif_prix = null;
@@ -127,12 +127,12 @@ class Manifestations
         return $this;
     }
 
-    public function getManifDate(): ?\DateTimeInterface
+    public function getManifDate(): ?string
     {
         return $this->manif_date;
     }
 
-    public function setManifDate(\DateTimeInterface $manif_date): self
+    public function setManifDate(?string $manif_date): self
     {
         $this->manif_date = $manif_date;
 

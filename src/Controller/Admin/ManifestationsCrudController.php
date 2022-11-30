@@ -29,7 +29,7 @@ class ManifestationsCrudController extends AbstractCrudController
             TextEditorField::new('manif_description'),
             TextEditorField::new('manif_casting'),
             NumberField::new('manif_prix'),
-            ImageField::new('manif_affiche')->setBasePath('uploads/manifs/')->setUploadDir('public/uploads/'),
+            ImageField::new('manif_affiche')->setBasePath('uploads/manifs/')->setUploadDir('public/uploads/manifs/'),
             TextField::new('manif_heure'),
             DateField::new('manif_date'),
             AssociationField::new('lieu_id','Lieux'),
