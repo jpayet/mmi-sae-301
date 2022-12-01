@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block h1 %}{% endblock %}
+
+{% block affichagPrincipale %}
+    <div>
+        <span id="article">{{manif.getManifTitre}}</span> - <span id="prix">{{manif.getManifPrix}}</span>€ <br>
+        <input type="number" value="1" min="1" max="99" id="qte">
+        <input type="hidden" id="id" value="{{manif.getId}}">
+        <button id="ajout">ajouter au panier</button>
+    </div>
+{% endblock %}
