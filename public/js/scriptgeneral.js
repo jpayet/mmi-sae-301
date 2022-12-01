@@ -1,8 +1,9 @@
-liste = document.cookie //recupere le cookie  sous forme de chaine de caractere 
-if (liste.length!=0)montab = JSON.parse(liste) // transforme la chaine  en tableau JSON
-else montab =Array() // si il n'y a pas de tableau dans le cookie alors créer le tableau
+liste = document.cookie 
+if (liste!=="")montab = JSON.parse(liste)
+else montab =Array() 
 console.log(montab)
 
-panier = 0
-montab.forEach(element => {   panier += 1*element.quantite }) //on recupérere et ajoute chq quantite ds le tableau des cookies
-document.getElementById('panier').innerHTML = panier 
+var panier =0
+montab.forEach(element => {   panier+= element.quantite }) 
+
+document.getElementById('panier').innerHTML=panier
