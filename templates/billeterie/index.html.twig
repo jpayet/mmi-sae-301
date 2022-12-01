@@ -50,11 +50,11 @@
 
 {% block affichagPrincipale %}
 
-    <section class="cards">
+    <section class="manifestations">
         {% for el in manifs %}
 
         <div class="manifs-card">
-            <div class="affiche"><img src='{{ asset("uploads/manifs/#{el.manifAffiche}") }}' alt="affiche"></div>
+            <div class="manifs-affiche"><img src='{{ asset("uploads/manifs/#{el.manifAffiche}") }}' alt="affiche"></div>
             <div class="manifs-data">
                 <div class="card-infos">
                     <p>{{ el.manifTitre }}</p>
