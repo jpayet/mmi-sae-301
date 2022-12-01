@@ -8,7 +8,7 @@
     <form method="" action="">
         <div class="searchbar">
             <input type="search" placeholder="Rechercher" id="searchbar" />
-            <button id="loupe" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button id="loupe" type="submit"><img src=" {{ asset('img/svg/searchIcon.svg') }}" alt="Rechercher"></button>
         </div>
     </form>
 {% endblock %}
@@ -38,9 +38,6 @@
 
                             document.getElementById('popcontent').innerHTML=data
                         });
-
-
-
                 })
             })
         })
@@ -52,7 +49,6 @@
 
     <section class="manifestations">
         {% for el in manifs %}
-
         <div class="manifs-card">
             <div class="manifs-affiche"><img src='{{ asset("uploads/manifs/#{el.manifAffiche}") }}' alt="affiche"></div>
             <div class="manifs-data">

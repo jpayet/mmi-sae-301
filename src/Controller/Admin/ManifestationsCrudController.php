@@ -20,7 +20,6 @@ class ManifestationsCrudController extends AbstractCrudController
         return Manifestations::class;
     }
 
-
     public function configureFields(string $pageName): iterable
     {
         return [
@@ -31,7 +30,7 @@ class ManifestationsCrudController extends AbstractCrudController
             NumberField::new('manif_prix'),
             ImageField::new('manif_affiche')->setBasePath('uploads/manifs/')->setUploadDir('public/uploads/manifs/'),
             TextField::new('manif_heure'),
-            DateField::new('manif_date'),
+            TextField::new('manif_date'),
             AssociationField::new('lieu_id','Lieux'),
             AssociationField::new('genre_id','Genres')
         ];
