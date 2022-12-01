@@ -10,9 +10,7 @@
         <script src="{{ asset('js/scriptgeneral.js') }}" defer></script>
         <script src="{{ asset('js/scriptpagearticles.js') }}" defer></script>
         <script src="{{ asset('js/scriptpanier.js') }}" defer></script>
-        <script src="{{ asset('js/scriptpopup.js') }}"></script>
-
-        <script src="https://kit.fontawesome.com/809b55cd38.js" crossorigin="anonymous"></script>
+        <script src="{{ asset('js/scriptpopup.js') }}" defer></script>
 
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
@@ -26,19 +24,18 @@
     <body>
         <header>
             <nav>
-                <img src="{{ asset('img/logo.png') }}" alt="logo Roubaix culture">
+                <img src="{{ asset('img/logo.png') }}" alt="Roubaix culture" class="logoNav">
                 <div class="navbar main-nav">
                     <ul>
-                        <li><i class="fa-solid fa-house"></i><a href="{{ path('app_accueil') }}">Accueil</a></li>
-                        <li><i class="fa-solid fa-ticket"></i><a href="{{ path('app_billeterie') }}">Billeterie</a></li>
-                        <li><i class="fa-solid fa-masks-theater"></i><a href="{{ path('app_salles') }}">Nos Salles</a></li>
-                        <li><i class="fa-solid fa-phone"></i><a href="{{ path('app_contact') }}">Contact</a></li>
+                        <li><a href="{{ path('app_accueil') }}">Accueil</a></li>
+                        <li><a href="{{ path('app_billeterie') }}">Billeterie</a></li>
+                        <li><a href="{{ path('app_salles') }}">Nos Salles</a></li>
                     </ul>
                 </div>
                 <div class="navbar user-nav">
                     <ul>
-                        <li><a href="{{ path('app_profil') }}"><i class="fa-solid fa-user"></i></a></li>
-                        <li><a href="{{ path('app_panier') }}"><i class="fa-solid fa-cart-shopping"></i><span id="panier"></span></a></li>
+                        <li><a href="{{ path('app_profil') }}"><img src="{{ asset('img/svg/accountIcon.svg') }}" alt="Mon compte" class="menuIcon"></a></li>
+                        <li><a href="{{ path('app_panier') }}"><img src="{{ asset('img/svg/cartIcon.svg') }}" alt="Panier"><span id="panier" class="menuIcon"></span></a></li>
                     </ul>
                 </div>
             </nav>
