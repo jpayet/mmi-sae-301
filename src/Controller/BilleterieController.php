@@ -27,17 +27,13 @@ class BilleterieController extends AbstractController
 
     }
 
-
-    #[Route('/bringId', name: 'app_bringId')]
-    public function bringid(Request $request, ManagerRegistry $doctrine): Response
+    #[Route('/billeterie/{id}', name:'app_manifs_select')]
+    public function pagesmanifs( ManifestationsRepository $manifsRepository, $id): Response
     {
-        $id = $request -> query -> get("id");
+        $manifs_id = $manifsRepository->find($id);
 
-        $bring = $doctrine->getRepository(Manifestations::class)->find($id);
-
-        return $this->render('billeterie/popupcontent.html.twig', [
-            'Bring' => $bring,
+        return $this->render('billeterie/manifestation.html.twig', [
+            'manif' => $manifs_id
         ]);
-
     }
 }

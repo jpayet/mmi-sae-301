@@ -38,7 +38,7 @@ nav{
 .navbar ul li a {
     text-decoration: none;
     color: #000;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .navbar ul{
@@ -59,6 +59,17 @@ nav{
 /* --------------- *\
   AFFICHAGE GENERAL
 \* --------------- */
+
+.entete{
+    margin: 20px;
+}
+
+.ln-entete{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 main{
     margin: 20px;
@@ -115,21 +126,6 @@ footer li a{
 
 /* ----- ENTETE BILLETERIE ----- */
 
-.entete{
-    margin: 20px;
-    width: 70%;
-}
-
-.ln-entete{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.manifestations{
-    width: 70%;
-}
 
 .searchbar button{
     position: relative;
@@ -139,20 +135,20 @@ footer li a{
 /* ----- LISTING MANIFS ----- */
 
 .manifs-card{
-    height: 175px;
+    height: 200px;
     width: 98% ;
     background-color: #eeeeee;
-    padding: 25px;
     display: flex;
     flex-direction: row;
     gap: 25px;
     margin: 20px;
-
+    border-radius: 10px;
 }
 
 /* partie affiche du produit */
 
 .manifs-affiche{
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,13 +156,15 @@ footer li a{
 }
 
 .manifs-card img{
-    height: 150px;
+    width: 200px;
+    height: auto;
 }
 
 /* partie infos des produits */
 
 .manifs-data{
     width: 100%;
+    padding: 10px;
 }
 
 .card-infos{
@@ -229,8 +227,11 @@ footer li a{
 }
 
 /* --------------- *\
-     PAGE PROFIL
+   PAGE CONNEXION
 \* --------------- */
+
+
+
 
 /* --------------- *\
      PAGE PANIER
