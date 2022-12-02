@@ -61,7 +61,11 @@ nav{
 \* --------------- */
 
 .entete{
-    margin: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-image: url("../img/svg/top-waves.svg");
+    background-attachment: fixed;
+    height: 160px;
 }
 
 .ln-entete{
@@ -89,6 +93,10 @@ section{
 
 section hr{
     width: 90%;
+}
+
+h1{
+    color: white;
 }
 
 /* --------------- *\
@@ -143,6 +151,7 @@ footer li a{
     gap: 25px;
     margin: 20px;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* partie affiche du produit */
