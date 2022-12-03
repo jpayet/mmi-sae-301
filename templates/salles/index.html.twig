@@ -9,7 +9,7 @@
     <section class="cards">
         {% for salle in sallestab %}
             <div class="salles-card">
-                <div class="affiche"><img src='{{ asset("uploads/manifs/#{salle.lieuAffiche}") }}' alt="affiche"></div>
+                <div class="affiche"><img src='{{ asset("uploads/lieux/#{salle.lieuAffiche}") }}' alt="affiche"></div>
                 <div class="salles-data">
                     <h1>{{ salle.lieuNom }}</h1>
                     <p>Nombre de place : {{ salle.lieuCapacite }}</p>

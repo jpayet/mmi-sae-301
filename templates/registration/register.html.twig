@@ -3,15 +3,34 @@
 {% block title %}Register{% endblock %}
 
 {% block affichagPrincipale %}
-    <h1>Register</h1>
+
 
     {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.client_email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+    <div class="class="login-form>
+        <div class="illustration-box">
+            <img src="{{ asset('img/svg/login.svg') }}" alt="login illustration">
+        </div>
 
-        <button type="submit" class="btn">Register</button>
+        <div class="input-box">
+            <h2 class="login-title">Créer votre compte</h2>
+
+            <div class="input-element">
+                <i class="fa-solid fa-email"></i>
+                {{ form_row(registrationForm.client_email) }}
+            </div>
+
+            <div class="input-element">
+                <i class="fa-solid fa-lock"></i>
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Password'
+                }) }}
+            </div>
+
+            {{ form_row(registrationForm.agreeTerms) }}
+
+            <button type="submit" class="btn">S'incrire</button>
+
+        </div>
+    </div>
     {{ form_end(registrationForm) }}
 {% endblock %}
