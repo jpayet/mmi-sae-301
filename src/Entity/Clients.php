@@ -103,7 +103,7 @@ class Clients implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    public function getEmail(): ?string
+    public function getClientEmail(): ?string
     {
         return $this->email;
     }

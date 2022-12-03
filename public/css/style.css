@@ -31,10 +31,6 @@ nav{
     height: 50px;
 }
 
-.navbar ul{
-    list-style: none;
-}
-
 .navbar ul li a {
     text-decoration: none;
     color: #000;
@@ -42,8 +38,10 @@ nav{
 }
 
 .navbar ul{
+    list-style: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 30px;
 }
 
@@ -55,6 +53,41 @@ nav{
 .menuIcon {
     height: 40px;
 }
+
+.username{
+    margin-right: -20px;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.dropdown-content{
+    background-color: white;
+    position: absolute;
+    display: none;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.userlog{
+    background-color: #eeeeee;
+    padding: 15px;
+}
+.userlinks{
+    padding: 10px;
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0 !important;
+}
+
+
+
 
 /* --------------- *\
   AFFICHAGE GENERAL
@@ -143,6 +176,7 @@ footer li a{
 /* ----- LISTING MANIFS ----- */
 
 .manifs-card{
+    overflow: hidden;
     height: 200px;
     width: 98% ;
     background-color: #eeeeee;
@@ -150,14 +184,13 @@ footer li a{
     flex-direction: row;
     gap: 25px;
     margin: 20px;
-    border-radius: 10px;
+    border-radius: 0px 50px 0px 50px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* partie affiche du produit */
 
 .manifs-affiche{
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,56 +224,158 @@ footer li a{
 }
 
 .card-infos-bt{
+    padding: 10px;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.genre-i{
+    border: 1px solid #000;
+    padding: 2px 10px;
+    border-radius: 30px;
 }
 
 /* boutons reserver */
 
 .manifs-data a{
-    margin-top: 15px;
-    margin-right: 0;
+    margin-top: 50px;
     text-decoration: none;
-    color: #000;
     border: 2px solid #000;
     color: #000;
+    border-radius: 5px;
     padding: 7px;
     font-weight: 600;
     font-size: 13px;
 }
 
-.manifs-data a:hover{
-    text-decoration: none;
-    color: #000;
-    border: 2px solid #000;
-    background-color: #000;
+.manifs-data a:hover {
     color: #fff;
-    padding: 7px;
-    font-weight: 600;
-    font-size: 13px;
-}
-
-/* --------------- *\
-  POPUP MANIFS CARD
-\* --------------- */
-
-.popupbox{
-    width: 80vw;
-    height: 300px;
-    position: absolute;
-    top: 150px;
-    left: 150px;
-    display: none;
-    background-color: white;
+    border: 2px solid #e3006a;
+    background-color: #e3006a;
+    color: #fff;
 }
 
 /* --------------- *\
    PAGE CONNEXION
 \* --------------- */
 
+.login-form{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 55vw;
+    height: 300px;
+    display: flex;
+}
+
+.illustration-box img{
+    width: 300px;
+    height: 300px;
+}
+
+.input-box{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.login-title{
+    color: #000;
+}
+
+.input-element{
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.login-form .input-element input{
+    border: none;
+    outline: none;
+    width: 90%;
+}
 
 
+.input-element i{
+    padding: 0 5px ;
+}
+
+.login-form button{
+    border: 1px solid #e3006a;
+    border-radius: 8px;
+    background-color: #e3006a;
+    color: white;
+    font-weight: 600;
+    padding: 8px;
+    text-transform: uppercase;
+}
+
+.alert {
+    color: red;
+}
+
+.sign{
+    text-align: center;
+}
+
+/* --------------- *\
+   PAGE INSCRIPTION
+\* --------------- */
+
+.registration_form form{
+   padding: 50px;
+}
+
+.registration_form{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 830px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+}
+
+.registration_form input[type="text"]{
+    margin-left: 65px;
+    border: 1px solid #aaaaaa;
+    outline: #e3006a;
+    width: 290px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.registration_form input[type="password"]{
+    margin-left: 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 8px;
+    outline: #e3006a;
+    width: 290px;
+    padding: 5px;
+}
+
+.registration_form button{
+    border: 1px solid #e3006a;
+    border-radius: 8px;
+    background-color: #e3006a;
+    color: white;
+    font-weight: 600;
+    padding: 8px;
+    text-transform: uppercase;
+    width: 95%;
+}
+
+.terms{
+    font-size: 16px;
+}
+
+input[type="checkbox"]{
+    margin: 0 10px;
+    transform: scale(1.4);
+}
 
 /* --------------- *\
      PAGE PANIER

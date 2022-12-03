@@ -27,10 +27,11 @@
                     <p>{{ el.manifHeure }}</p>
                 </div>
                 <div class="card-infos2">
-                    <p>{{ el.getLieuId.getLieuNom }}</p>
+                    <p><i class="fa-solid fa-location-dot"></i> {{ el.getLieuId.getLieuNom }}</p>
                     <p>{{ el.manifPrix }} €</p>
                 </div>
                 <div class="card-infos-bt">
+                    <p class="genre-i">{{ el.getGenreId.getGenreTitre }}</p>
                     <a href="billeterie/{{el.Id}}" class="resButton">DETAILS</a>
                 </div>
             </div>

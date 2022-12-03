@@ -1,17 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Inscription{% endblock %}
+
+{% block h1 %}Inscription{% endblock %}
 
 {% block affichagPrincipale %}
-    <h1>Register</h1>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.client_email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+    <div class="registration_form">
+        <div class="illustration-box">
+            <img src="{{ asset('img/svg/register.svg') }}" alt="login illustration">
+        </div>
+    {{ form_start(registrationForm)}}
+        <div class="input-box">
+            <h2 class="login-title">Créer votre compte</h2>
 
-        <button type="submit" class="btn">Register</button>
+                {{ form_row(registrationForm.client_email, {
+                    label: 'Email *'
+                }) }}
+
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Mot de passe *'
+                }) }}
+
+            <p class="terms">Veuillez lire et accepter nos <a href="">Conditions</a>, notre <a href="">Politique de confidentialité</a> et notre <a href="">Utilisation des cookies</a> avant de vous inscrire. </p>
+
+            {{ form_row(registrationForm.agreeTerms, { label: 'Accepter'}) }}
+
+            <button type="submit" class="btn">S'incrire</button>
+
+            <p class="sign">Vous avez déjà un compte ? <a href="{{ path('app_login') }}"> Connectez-vous </a></p>
+
+        </div>
     {{ form_end(registrationForm) }}
+    </div>
 {% endblock %}

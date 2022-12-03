@@ -5,6 +5,7 @@
         <!-- meta description -->
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <script src="https://kit.fontawesome.com/809b55cd38.js" crossorigin="anonymous"></script>
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
@@ -36,7 +37,26 @@
                 </div>
                 <div class="navbar user-nav">
                     <ul>
-                        <li><a href="{{ path('app_profil') }}"><img src="{{ asset('img/svg/accountIcon.svg') }}" alt="Mon compte" class="menuIcon"></a></li>
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            <li class="username">{{ app.user.clientemail }}</li>
+                        {% endif %}
+                        <div class="dropdown">
+                            <button class="dropbtn"><img src="{{ asset('img/svg/accountIcon.svg') }}" alt="Mon compte" class="menuIcon"></button>
+                            <div class="dropdown-content">
+                                <div class="userlog">
+                                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                        <p class="username">Bonjour {{ app.user.clientemail }}</p><a href="{{ path('app_logout') }}">Déconnexion</a>
+                                        {% else %}
+                                        <a href="{{ path('app_login') }}">Se connecter</a> | <a href="{{ path('app_register') }}">S'inscrire</a>
+                                    {% endif %}
+                                </div>
+                                <ul class="userlinks">
+                                    <li><i class="fa-solid fa-user"></i> <a href="{{ path('app_profil') }}">Mon compte</a></li>
+                                    <li><i class="fa-solid fa-box"></i> <a href="{{ path('app_profil') }}">Mes commandes</a></li>
+                                    <li><i class="fa-regular fa-file-lines"></i> <a href="{{ path('app_profil') }}">Mes factures</a></li>
+                                </ul>
+                            </div>
+                        </div>
                         <li><a href="{{ path('app_panier') }}"><img src="{{ asset('img/svg/cartIcon.svg') }}" alt="Panier" class="menuIcon"><span id="panier"></span></a></li>
                     </ul>
                 </div>
