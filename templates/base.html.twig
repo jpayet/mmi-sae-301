@@ -37,6 +37,9 @@
                 </div>
                 <div class="navbar user-nav">
                     <ul>
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            <li class="username">{{ app.user.clientemail }}</li>
+                        {% endif %}
                         <li><a href="{{ path('app_profil') }}"><img src="{{ asset('img/svg/accountIcon.svg') }}" alt="Mon compte" class="menuIcon"></a></li>
                         <li><a href="{{ path('app_panier') }}"><img src="{{ asset('img/svg/cartIcon.svg') }}" alt="Panier" class="menuIcon"><span id="panier"></span></a></li>
                     </ul>

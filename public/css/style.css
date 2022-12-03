@@ -31,10 +31,6 @@ nav{
     height: 50px;
 }
 
-.navbar ul{
-    list-style: none;
-}
-
 .navbar ul li a {
     text-decoration: none;
     color: #000;
@@ -42,8 +38,10 @@ nav{
 }
 
 .navbar ul{
+    list-style: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 30px;
 }
 
@@ -54,6 +52,10 @@ nav{
 
 .menuIcon {
     height: 40px;
+}
+
+.username{
+    margin-right: -20px;
 }
 
 /* --------------- *\
@@ -259,10 +261,10 @@ footer li a{
     border-radius: 8px;
 }
 
-.input-element input{
+.login-form .input-element input{
     border: none;
     outline: none;
-    width: 300px;
+    width: 90%;
 }
 
 
@@ -284,8 +286,64 @@ footer li a{
     color: red;
 }
 
-.inscription{
+.sign{
     text-align: center;
+}
+
+/* --------------- *\
+   PAGE INSCRIPTION
+\* --------------- */
+
+.registration_form form{
+   padding: 50px;
+}
+
+.registration_form{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 830px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+}
+
+.registration_form input[type="text"]{
+    margin-left: 65px;
+    border: 1px solid #aaaaaa;
+    outline: #e3006a;
+    width: 290px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.registration_form input[type="password"]{
+    margin-left: 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 8px;
+    outline: #e3006a;
+    width: 290px;
+    padding: 5px;
+}
+
+.registration_form button{
+    border: 1px solid #e3006a;
+    border-radius: 8px;
+    background-color: #e3006a;
+    color: white;
+    font-weight: 600;
+    padding: 8px;
+    text-transform: uppercase;
+    width: 95%;
+}
+
+.terms{
+    font-size: 16px;
+}
+
+input[type="checkbox"]{
+    margin: 0 10px;
+    transform: scale(1.4);
 }
 
 /* --------------- *\

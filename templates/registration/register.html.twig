@@ -1,36 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Inscription{% endblock %}
+
+{% block h1 %}Inscription{% endblock %}
 
 {% block affichagPrincipale %}
 
-
-    {{ form_start(registrationForm) }}
-    <div class="class="login-form>
+    <div class="registration_form">
         <div class="illustration-box">
-            <img src="{{ asset('img/svg/login.svg') }}" alt="login illustration">
+            <img src="{{ asset('img/svg/register.svg') }}" alt="login illustration">
         </div>
-
+    {{ form_start(registrationForm)}}
         <div class="input-box">
             <h2 class="login-title">Créer votre compte</h2>
 
-            <div class="input-element">
-                <i class="fa-solid fa-email"></i>
-                {{ form_row(registrationForm.client_email) }}
-            </div>
-
-            <div class="input-element">
-                <i class="fa-solid fa-lock"></i>
-                {{ form_row(registrationForm.plainPassword, {
-                    label: 'Password'
+                {{ form_row(registrationForm.client_email, {
+                    label: 'Email *'
                 }) }}
-            </div>
 
-            {{ form_row(registrationForm.agreeTerms) }}
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Mot de passe *'
+                }) }}
+
+            <p class="terms">Veuillez lire et accepter nos <a href="">Conditions</a>, notre <a href="">Politique de confidentialité</a> et notre <a href="">Utilisation des cookies</a> avant de vous inscrire. </p>
+
+            {{ form_row(registrationForm.agreeTerms, { label: 'Accepter'}) }}
 
             <button type="submit" class="btn">S'incrire</button>
 
+            <p class="sign">Vous avez déjà un compte ? <a href="{{ path('app_login') }}"> Connectez-vous </a></p>
+
         </div>
-    </div>
     {{ form_end(registrationForm) }}
+    </div>
 {% endblock %}

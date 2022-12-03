@@ -2,7 +2,7 @@
 
 {% block title %}Page de connexion{% endblock %}
 
-{% block h1 %}Connexion à votre compte{% endblock %}
+{% block h1 %}Connexion{% endblock %}
 
 {% block affichagPrincipale %}
 <form method="post" class="login-form">
@@ -51,7 +51,7 @@
             <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
         {% endif %}
 
-        <p class="inscription">Vous n'avez pas de compte ? <a href="{{ path('app_register') }}"> Inscrivez-vous </a></p>
+        <p class="sign">Vous n'avez pas de compte ? <a href="{{ path('app_register') }}"> Inscrivez-vous </a></p>
     </div>
 </form>
 {% endblock %}
