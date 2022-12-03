@@ -58,6 +58,37 @@ nav{
     margin-right: -20px;
 }
 
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.dropdown-content{
+    background-color: white;
+    position: absolute;
+    display: none;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.userlog{
+    background-color: #eeeeee;
+    padding: 15px;
+}
+.userlinks{
+    padding: 10px;
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0 !important;
+}
+
+
+
+
 /* --------------- *\
   AFFICHAGE GENERAL
 \* --------------- */
