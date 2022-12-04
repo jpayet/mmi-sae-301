@@ -54,8 +54,12 @@ nav{
     height: 40px;
 }
 
-.username{
+.username-nav{
     margin-right: -20px;
+}
+
+.dropdown{
+    position: relative;
 }
 
 .dropdown .dropbtn {
@@ -65,9 +69,16 @@ nav{
 }
 
 .dropdown-content{
+    z-index: 1;
+    left: -50px;
+    min-width: 250px ;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    overflow: hidden;
+    border-radius: 5px;
     background-color: white;
     position: absolute;
     display: none;
+    padding-bottom: 10px;
 }
 
 .dropdown:hover .dropdown-content{
@@ -76,16 +87,20 @@ nav{
 
 .userlog{
     background-color: #eeeeee;
-    padding: 15px;
+    padding: 10px;
 }
+
+.userlog .username{
+    font-weight: 600;
+}
+
 .userlinks{
     padding: 10px;
     display: flex;
     flex-direction: column !important;
     align-items: flex-start !important;
-    padding: 0 !important;
+    padding: 10px !important;
 }
-
 
 
 
@@ -137,27 +152,59 @@ h1{
 \* --------------- */
 
 footer{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 30px 0px 10px 0px;
+    background-image: url("../img/svg/fwaves.svg");
+    background-size: cover ;
+    color: #fff;
     width: 100%;
-    background-color: #dedede;
-    padding: 20px;
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
+    position: relative;
+    bottom: 0;
 }
 
-footer div ul{
+footer ul{
     list-style: none;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    gap: 35px;
-    padding: 0;
+    align-items: center;
+    gap: 50px;
 }
 
 footer li a{
+    color: #000;
+}
+
+.join{
+    margin: 50px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.join img{
+    width: 200px;
+    height: auto;
+}
+
+.social-icons{
+    margin: 10px 0;
+}
+
+.social-icons i{
+    color: #fff;
+    padding: 5px;
+}
+
+.resTitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+.resTitle span{
     color: #000;
 }
 
