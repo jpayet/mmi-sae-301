@@ -285,7 +285,7 @@ footer li a{
 .card-infos-bt{
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-start;
 }
 
