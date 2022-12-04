@@ -62,7 +62,7 @@
                         <li><a href="{{ path('app_panier') }}"><img src="{{ asset('img/svg/cartIcon.svg') }}" alt="Panier" class="menuIcon"><span id="panier"></span></a></li>
                         <li>
                             {% if is_granted('ROLE_ADMIN') %}
-                                <i class="fa-solid fa-gears"></i>
+                                <a href="{{ path('admin') }}"><i class="fa-solid fa-gears"></i></a>
                             {% endif %}
                         </li>
                     </ul>
