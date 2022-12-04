@@ -37,6 +37,10 @@ nav{
     font-size: 18px;
 }
 
+.navbar ul li a:hover {
+    color: #e3006a;
+}
+
 .navbar ul{
     list-style: none;
     display: flex;
@@ -231,7 +235,7 @@ footer li a{
     flex-direction: row;
     gap: 25px;
     margin: 20px;
-    border-radius: 0px 50px 0px 50px;
+    border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -482,4 +486,86 @@ tbody{
     color: #fff;
     padding: 7px;
     font-weight: 600;
+}
+
+/* --------------- *\
+     MANIFS IND
+\* --------------- */
+
+.manifs-card-box{
+    margin: 0 auto;
+    padding: 50px;
+    background-color: white;
+    border-radius: 20px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.manifs-card-box img{
+    width: 200px;
+    height: auto;
+}
+
+.manifs-card-box p{
+    margin: 10px 0;
+}
+.manif-intit{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.manif-genre{
+    text-align: center;
+    border: 1px solid black;
+    padding: 2px;
+    border-radius: 20px;
+    width: 65px;
+    margin: 10px 0;
+}
+
+.manif-acces span{
+    font-weight: bold;
+}
+
+.manif-acces i{
+    margin: 0 5px;
+}
+
+.addtocart{
+    margin-top: 30px;
+}
+
+.addtocart input{
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+.addtocart button{
+    border: 1px solid #e3006a;
+    border-radius: 8px;
+    background-color: #e3006a;
+    color: white;
+    font-weight: 600;
+    padding: 8px;
+    text-transform: uppercase;
+}
+
+.manifs-desc-box{
+    margin: 10px auto;
+    padding: 50px;
+    background-color: white;
+    width: 1200px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 20px;
+}
+
+.ariane{
+    font-size: 14px;
+    margin: 20px ;
 }

@@ -5,10 +5,32 @@
 {% block h1 %}{% endblock %}
 
 {% block affichagPrincipale %}
-    <div>
-        <span id="article">{{manif.getManifTitre}}</span> - <span id="prix">{{manif.getManifPrix}}</span>€ <br>
-        <input type="number" value="1" min="1" max="99" id="qte">
-        <input type="hidden" id="id" value="{{manif.getId}}">
-        <button id="ajout">ajouter au panier</button>
+    <p class="ariane"><a href="{{ path('app_billeterie') }}">Billeterie</a> > {{ manif.getManifTitre }}</p>
+    <div class="manifs-card-box">
+        <img src='{{ asset("uploads/manifs/#{manif.manifAffiche}") }}' alt="affiche">
+        <div class="manifs-card-desc">
+            <span id="article" class="manif-intit">{{ manif.getManifTitre }}</span>
+            <p class="manif-genre">{{ manif.getGenreId.getGenreTitre }}</p>
+            <div class="manif-acces">
+                <p> <i class="fa-solid fa-microphone-lines"></i><span>Casting : </span> {{ manif.manifCasting}} </p>
+                <p> <i class="fa-solid fa-calendar-days"></i><span>Date et heure : </span>Le {{ manif.manifDate }} à {{ manif.manifHeure}} </p>
+                <p> <i class="fa-solid fa-location-dot"></i><span>Lieu : </span>{{ manif.getLieuId.getLieuNom }}</p>
+            </div>
+            <div class="addtocart">
+                <p>Choisissez votre nombre de place(s)</p>
+                <span id="prix">{{manif.getManifPrix}}</span>€ *
+                <input type="number" value="1" min="1" max="99" id="qte">
+                <input type="hidden" id="id" value="{{manif.getId}}">
+                <button id="ajout">Ajouter au panier</button>
+            </div>
+        </div>
     </div>
+    <div class="manifs-desc-box">
+        <h2>Description :</h2>
+        <br >
+        <p>{{ manif.manifDescription }}</p>
+    </div>
+
+
+
 {% endblock %}
