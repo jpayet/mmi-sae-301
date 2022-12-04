@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <!-- meta description -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Service de e-billeterie spectacles, concert, et tout autre évènements à Roubaix. Acheter vos places pour plus grands artistes, comédiens en tournée à Roubaix.">
+
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         <script src="https://kit.fontawesome.com/809b55cd38.js" crossorigin="anonymous"></script>
@@ -27,7 +29,7 @@
     <body>
         <header>
             <nav>
-                <img src="{{ asset('img/logo.png') }}" alt="Roubaix culture" class="logoNav">
+                <img src="{{ asset('img/logo.png') }}" alt="Logo Roubaix culture" class="logoNav">
                 <div class="navbar main-nav">
                     <ul>
                         <li><a href="{{ path('app_accueil') }}">Accueil</a></li>
@@ -90,7 +92,7 @@
                 </ul>
             </div>
             <div class="join">
-                <img src="{{ asset('img/logo.png') }}">
+                <img src="{{ asset('img/logo.png') }}" alt="logo Roubaix Culture">
                 <div class="social-media">
                     <p class="resTitle"><span>RETROUVEZ-NOUS </span>SUR</p>
                     <div class="social-icons">
