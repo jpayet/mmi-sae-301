@@ -4,7 +4,7 @@
 
 {% block javascripts %}<script src="{{ asset('js/scriptpanier.js')}}"></script>{% endblock %}
 
-{% block h1 %}RECAPITULATIF DE VOTRE PANIER{% endblock %}
+{% block h1 %}VOTRE PANIER{% endblock %}
 
 {% block affichagPrincipale %}
     <section class="panier">
@@ -30,7 +30,7 @@
     <section>
         <hr>
         <div class="validation">
-            <form action="finalisation.php" method="post">
+            <form action="" method="post">
                 <input type="hidden" name="liste" id="liste">
                 <a href="billeterie">CONTINUER MES ACHATS</a>
                 <button type="submit">FINALISER MES ACHATS</button>
