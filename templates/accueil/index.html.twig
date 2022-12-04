@@ -5,19 +5,56 @@
 {% block h1 %}EN VEDETTE{% endblock %}
 
 {% block affichagPrincipale %}
-    <div class="promo-card">
-        <div class="affiche">
-            <img src="{{ asset('img/shakaponk') }}" alt="">
+    <div class="manifs-card">
+        <div class="manifs-affiche"><img src='{{ asset("uploads/manifs/5.png") }}' alt="affiche"></div>
+        <div class="manifs-data">
+            <div class="card-infos">
+                <p>Les autres c'est nous</p>
+                <p>14/01/2023</p>
+                <p>20H30</p>
+            </div>
+            <div class="card-infos2">
+                <p><i class="fa-solid fa-location-dot"></i> LA CONDITION PUBLIQUE </p>
+                <p>30 €</p>
+            </div>
+            <div class="card-infos-bt">
+                <a href="billeterie/5" class="resButton">DETAILS</a>
+            </div>
         </div>
-        <div class="donnees">
-
+    </div>
+    <div class="manifs-card">
+        <div class="manifs-affiche"><img src='{{ asset("uploads/manifs/7.png") }}' alt="affiche"></div>
+        <div class="manifs-data">
+            <div class="card-infos">
+                <p>Mise en scène David Rozen</p>
+                <p>11/12/2022</p>
+                <p>16H</p>
+            </div>
+            <div class="card-infos2">
+                <p><i class="fa-solid fa-location-dot"></i> LE COLISÉE </p>
+                <p>39 €</p>
+            </div>
+            <div class="card-infos-bt">
+                <a href="billeterie/7" class="resButton">DETAILS</a>
+            </div>
+        </div>
+    </div>
+    <div class="manifs-card">
+        <div class="manifs-affiche"><img src='{{ asset("uploads/manifs/22.png") }}' alt="affiche"></div>
+        <div class="manifs-data">
+            <div class="card-infos">
+                <p>Seuls (Tournée)</p>
+                <p>12/02/2023</p>
+                <p>17H</p>
+            </div>
+            <div class="card-infos2">
+                <p><i class="fa-solid fa-location-dot"></i> LE COLISÉE </p>
+                <p>32.2 €</p>
+            </div>
+            <div class="card-infos-bt">
+                <a href="billeterie/22" class="resButton">DETAILS</a>
+            </div>
         </div>
     </div>
 {% endblock %}
 
-{% block ssSection %}
-    <section>
-        <h2>NOS SALLES FAVORITES</h2>
-        <hr>
-    </section>
-{% endblock %}
