@@ -6,25 +6,16 @@
 
 {% block affichagPrincipale %}
 
-    <section class="cards">
+    <section class="lieux">
         {% for salle in sallestab %}
             <div class="salles-card">
-                <div class="affiche"><img src='{{ asset("uploads/lieux/#{salle.lieuAffiche}") }}' alt="affiche"></div>
+                <div class="salles-affiche"><img src='{{ asset("uploads/lieux/#{salle.lieuAffiche}") }}' alt="affiche {{ salle.lieuNom }}"></div>
                 <div class="salles-data">
-                    <h1>{{ salle.lieuNom }}</h1>
-                    <p>Nombre de place : {{ salle.lieuCapacite }}</p>
-                    <a href="salles/{{salle.Id}}">Lien vers la salle</a>
+                    <h2>{{ salle.lieuNom }}</h2>
+                    <p>{{ salle.lieuCapacite }} places disponibles</p>
+                    <a href="salles/{{salle.Id}}">Voir les évènements</a>
                 </div>
             </div>
         {% endfor %}
     </section>
-
-    <div class="popupbox">
-        <div class="popupcontainer">
-            <button class="pop-cross">hide popup</button>
-            <div id="popcontent">
-
-            </div>
-        </div>
-    </div>
 {% endblock %}
