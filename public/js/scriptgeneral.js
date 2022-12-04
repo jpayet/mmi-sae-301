@@ -1,7 +1,6 @@
 liste = recupCookie("panier")
 if (liste!="")montab = JSON.parse(liste)
-else montab =Array() 
-console.log(montab)
+else montab =Array()
 
 var panier =0
 montab.forEach(element => {   panier+= element.quantite }) 

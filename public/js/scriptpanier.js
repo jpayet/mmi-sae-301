@@ -1,7 +1,7 @@
 liste = recupCookie("panier") //recupere le cookie  sous forme de chaine de caractere
 if (liste!="")montab = JSON.parse(liste) // transforme la chaine  en tableau JSON
 else montab =Array() // si il n'y a pas de tableau dans le cookie alors créer le tableau
-console.log(montab)
+
 document.getElementById('liste').value="panier="+JSON.stringify(montab)+"; path=/";
 
 
@@ -36,7 +36,6 @@ montab.forEach(uneinfo => {
             montab[index].quantite	= parseInt(montab[index].quantite) +1; 
             document.cookie = "panier="+JSON.stringify(montab)+"; path=/";
             document.getElementById('liste').value="panier="+JSON.stringify(montab)+"; path=/";
-            console.log(montab)
             totalgeneral += 1*prix
             document.querySelector('#total').innerHTML=totalgeneral
         })
@@ -58,7 +57,6 @@ montab.forEach(uneinfo => {
               montab[index].quantite	= parseInt(montab[index].quantite) -1; 
               document.cookie = "panier="+JSON.stringify(montab)+"; path=/";
               document.getElementById('liste').value="panier="+JSON.stringify(montab)+"; path=/";
-              console.log(montab)
               totalgeneral -= parsInt(prix)
               document.querySelector('#total').innerHTML=totalgeneral
           })
