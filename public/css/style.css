@@ -41,6 +41,10 @@ nav{
     color: #e3006a;
 }
 
+.navbar ul li a:hover #panier{
+    color: #000;
+}
+
 .navbar ul{
     list-style: none;
     display: flex;
@@ -528,8 +532,9 @@ tbody{
     border: 1px solid black;
     padding: 2px;
     border-radius: 20px;
-    width: 65px;
-    margin: 10px 0;
+    min-width: 65px;
+    max-width: 75px;
+    margin: 10px;
 }
 
 .manif-acces span{

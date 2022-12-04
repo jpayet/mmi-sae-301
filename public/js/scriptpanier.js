@@ -59,7 +59,7 @@ montab.forEach(uneinfo => {
               document.cookie = "panier="+JSON.stringify(montab)+"; path=/";
               document.getElementById('liste').value="panier="+JSON.stringify(montab)+"; path=/";
               console.log(montab)
-              if (qte>0)totalgeneral -= parsInt(prix)
+              if(qte >0)totalgeneral -= 1*prix
               document.querySelector('#total').innerHTML=totalgeneral
           })
     }
