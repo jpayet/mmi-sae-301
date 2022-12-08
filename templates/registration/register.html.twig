@@ -14,12 +14,15 @@
         <div class="input-box">
             <h2 class="login-title">Créer votre compte</h2>
 
+                {{ form_row(registrationForm.client_prenom, {
+                    label: 'Prénom *' , 'label_attr': {'class': 'register_label'}}) }}
+
                 {{ form_row(registrationForm.client_email, {
-                    label: 'Email *'
+                    label: 'Email *' , 'label_attr': {'class': 'register_label'}
                 }) }}
 
                 {{ form_row(registrationForm.plainPassword, {
-                    label: 'Mot de passe *'
+                    label: 'Mot de passe *' , 'label_attr': {'class': 'register_label'}
                 }) }}
 
             <p class="terms">Veuillez lire et accepter nos <a href="#">Conditions</a> et notre <a href="#">Politique de confidentialité</a> avant de vous inscrire. </p>

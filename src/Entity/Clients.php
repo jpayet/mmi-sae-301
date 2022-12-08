@@ -38,6 +38,9 @@ class Clients implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 5, nullable: true)]
     private ?string $client_adr_cp = null;
 
+    #[ORM\Column(length: 50, nullable: true)]
+    private ?string $client_prenom = null;
+
     public function getId(): ?string
     {
         return $this->id;
@@ -147,6 +150,18 @@ class Clients implements UserInterface, PasswordAuthenticatedUserInterface
     public function setClientAdrCp(?string $client_adr_cp): self
     {
         $this->client_adr_cp = $client_adr_cp;
+
+        return $this;
+    }
+
+    public function getClientPrenom(): ?string
+    {
+        return $this->client_prenom;
+    }
+
+    public function setClientPrenom(?string $client_prenom): self
+    {
+        $this->client_prenom = $client_prenom;
 
         return $this;
     }
