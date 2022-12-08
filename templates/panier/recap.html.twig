@@ -4,10 +4,14 @@
 
 {% block javascripts %}<script src="{{ asset('js/scriptpanier.js')}}"></script>{% endblock %}
 
-{% block h1 %}VOTRE PANIER{% endblock %}
+{% block h1 %}RECAPITULATIF{% endblock %}
 
 {% block affichagPrincipale %}
-    <section class="panier">
+    <section class="">
+    <div class="recap_panier">
+        <div class="recap_entete">
+            <h2>Récapitulatif de votre panier</h2>
+        </div>
         <table>
             <thead>
             <tr>
@@ -15,7 +19,6 @@
                 <th>Nombre de place(s)</th>
                 <th>Prix à l'unité</th>
                 <th>Prix total</th>
-                <th>Supprimer</th>
             </tr>
             </thead>
             <tbody id="zone">
@@ -23,20 +26,12 @@
             </tbody>
             <tfoot><tr><td id="bas">TOTAL DE LA COMMANDE</td><td colspan="2"></td><td><span id="total"></span></td></tr></tfoot>
         </table>
+    </div>
     </section>
+
 {% endblock %}
 
 {% block ssSection %}
-    <section>
-        <hr>
-        <div class="validation">
-            <form action="{{ path('app_recap_panier') }}" method="post">
-                <input type="hidden" name="liste" id="liste">
-                <a href="{{ path('app_billeterie') }}">CONTINUER MES ACHATS</a>
-                <button type="submit">FINALISER MES ACHATS</button>
-            </form>
-        </div>
 
-    </section>
 {% endblock %}
 
