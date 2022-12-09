@@ -2,13 +2,13 @@
 
 {% block title %}Panier{% endblock %}
 
-{% block javascripts %}<script src="{{ asset('js/scriptpanier.js')}}"></script>{% endblock %}
+{% block javascripts %}<script src="{{ asset('js/scriptpanier.min.js')}}"></script>{% endblock %}
 
 {% block h1 %}VOTRE COMMANDE{% endblock %}
 
 {% block affichagPrincipale %}
     <section class="achat">
-
+        <p><a href="{{ path('app_panier') }}" class="herobt"><< Retour au panier</a></p>
         <div class="recap_panier">
             <div class="recap_entete">
                 <p class="cattitle">Récapitulatif de votre panier</p>
@@ -33,7 +33,7 @@
                 </div>
                 <hr>
                 <div class="row_info">
-                    <p>Email : </p><p>test</p>
+                    <p>Email :{% if is_granted('IS_AUTHENTICATED_FULLY') %} {{ app.user.clientemail }} {% endif %} moncompte#1452@roubaix-culture.fr </p>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="large_inputbox">
                         <label for="expiration">Cryptogramme *</label>
-                        <input type="text" name="crypto" id="crypto" placeholder="092" required>
+                        <input type="text" name="crypto" id="crypto" placeholder="092" minlength="3" maxlength="3" required>
                     </div>
                 </div>
                 <button type="submit" class="paybt">Payer</button>
