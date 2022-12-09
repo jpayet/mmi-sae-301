@@ -633,7 +633,19 @@ tbody{
     margin: 0 auto;
     background-color: #fff;
     border-radius: 20px;
-    padding: 10px;
+    padding: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 80vw;
+}
+
+.recap_entete{
+    padding-bottom: 5px;
+}
+
+.recap_panier .panier{
+    background-color: #eeeeee;
+    min-height: 75px;
+    border-radius: 8px;
 }
 
 .presentation h2{
@@ -673,3 +685,5 @@ tbody{
     background:none;
     border: none;
 }
+
+

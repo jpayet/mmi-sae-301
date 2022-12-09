@@ -8,25 +8,15 @@
 
 {% block affichagPrincipale %}
     <section class="">
-    <div class="recap_panier">
-        <div class="recap_entete">
-            <h2>Récapitulatif de votre panier</h2>
+        <div class="recap_panier">
+            <div class="recap_entete">
+                <h2>Récapitulatif de votre panier</h2>
+            </div>
+            <div class="panier">
+            </div>
         </div>
-        <table>
-            <thead>
-            <tr>
-                <th>Produit</th>
-                <th>Nombre de place(s)</th>
-                <th>Prix à l'unité</th>
-                <th>Prix total</th>
-            </tr>
-            </thead>
-            <tbody id="zone">
 
-            </tbody>
-            <tfoot><tr><td id="bas">TOTAL DE LA COMMANDE</td><td colspan="2"></td><td><span id="total"></span></td></tr></tfoot>
-        </table>
-    </div>
+        <div class="modalite"></div>
     </section>
 
 {% endblock %}
