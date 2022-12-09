@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Confirmation{% endblock %}
+
+{% block h1 %}VALIDATION{% endblock %}
+
+{% block affichagPrincipale %}
+    <div class="modal_validation">
+        <p>Bravo ! Votre commande à bien été validée.</p> <br>
+        <p>Vous pouvez dès à présent retrouver vos places directement dans votre boite mail ou bien dans la rubrique <a href="{{ path('app_profil') }}">Mon Compte</a>.</p>
+        <p class="explore"><a href="{{ path('app_billeterie') }}">Continuer à explorer</a> </p>
+    </div>
+{% endblock %}
+

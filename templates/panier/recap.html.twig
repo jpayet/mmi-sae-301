@@ -4,19 +4,63 @@
 
 {% block javascripts %}<script src="{{ asset('js/scriptpanier.js')}}"></script>{% endblock %}
 
-{% block h1 %}RECAPITULATIF{% endblock %}
+{% block h1 %}VOTRE COMMANDE{% endblock %}
 
 {% block affichagPrincipale %}
-    <section class="">
+    <section class="achat">
+
         <div class="recap_panier">
             <div class="recap_entete">
-                <h2>Récapitulatif de votre panier</h2>
+                <p class="cattitle">Récapitulatif de votre panier</p>
             </div>
             <div class="panier">
             </div>
         </div>
 
-        <div class="modalite"></div>
+        <div class="modalite">
+            <p class="cattitle">Modalité de livraison</p>
+            <div class="modal_info">
+                <div class="row_info">
+                    <p>Mode de livraison : </p><p>Reçu PDF par email - Imprimable</p>
+                </div>
+                <hr>
+                <div class="row_info">
+                    <p>Délai de livraison : </p><p>Immédiat</p>
+                </div>
+                <hr>
+                <div class="row_info">
+                    <p>Frais de livraison : </p><p>0,00€</p>
+                </div>
+                <hr>
+                <div class="row_info">
+                    <p>Email : </p><p>test</p>
+                </div>
+            </div>
+        </div>
+        <div class="formbox">
+            <form action="{{ path('app_validation') }}" method="post" class="credit_card_form">
+                <p class="cattitle">Payer par carte bancaire</p>
+                <div class="large_inputbox">
+                    <label for="num">Numéro de carte *</label>
+                    <input type="text" name="num" id="num" placeholder="1852 2548 6525 8931" required>
+                </div>
+                <div class="large_inputbox">
+                    <label for="titulaire">Titulaire de la carte *</label>
+                    <input type="text" name="titulaire" id="titulaire" placeholder="Dupont Martin" required>
+                </div>
+                <div class="assocation_input">
+                    <div class="large_inputbox">
+                        <label for="expiration">Date d'expiration *</label>
+                        <input type="month" name="expiration" id="expiration" required>
+                    </div>
+                    <div class="large_inputbox">
+                        <label for="expiration">Cryptogramme *</label>
+                        <input type="text" name="crypto" id="crypto" placeholder="092" required>
+                    </div>
+                </div>
+                <button type="submit" class="paybt">Payer</button>
+            </form>
+        </div>
     </section>
 
 {% endblock %}

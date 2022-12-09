@@ -634,12 +634,14 @@ tbody{
     background-color: #fff;
     border-radius: 20px;
     padding: 15px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     width: 80vw;
 }
 
-.recap_entete{
+.cattitle{
     padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .recap_panier .panier{
@@ -686,4 +688,90 @@ tbody{
     border: none;
 }
 
+.modalite{
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 80vw;
+}
 
+.row_info{
+    display: grid;
+    grid-template-columns: 200px 400px;
+    padding: 8px;
+}
+
+.formbox{
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 80vw;
+}
+.credit_card_form{
+    width: 350px;
+}
+
+.large_inputbox{
+    margin:10px;
+}
+
+.large_inputbox label{
+    display: block;
+    margin-bottom: 2px;
+}
+
+.large_inputbox input{
+    border: 1px solid #aaaaaa;
+    padding: 5px;
+    border-radius: 8px;
+    width: 100%;
+
+}
+
+.assocation_input{
+    display: flex;
+    gap: 20px;
+
+}
+
+.paybt{
+    margin: 5px;
+    width: 95%;
+    background-color: #0065fc;
+    color: white;
+    font-weight: bold;
+    padding: 6px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+.modal_validation{
+    text-align: center;
+    height: 150px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 40vw;
+}
+
+.explore{
+    margin: 25px;
+}
+
+.explore a{
+    width: 95%;
+    background-color: #0065fc;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+
+}
