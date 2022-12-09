@@ -14,7 +14,7 @@ document.getElementById('ajout').addEventListener('click',function() {
                 console.log(montab)
                 }
 
-    panier+=parseInt(document.getElementById('qte').value); // incrementation de la valeur du panier
+    panier+=parseInt(document.getElementById('qte').value()); // incrementation de la valeur du panier
     document.getElementById('panier').innerHTML=panier; 
     document.cookie = "panier="+JSON.stringify(montab)+"; path=/";
 
