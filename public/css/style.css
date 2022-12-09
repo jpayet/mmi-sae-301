@@ -285,7 +285,7 @@ footer li a{
 .card-infos-bt{
     padding: 10px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-start;
 }
 
@@ -391,28 +391,23 @@ footer li a{
 .registration_form{
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 20px;
-    margin: 0 auto;
+    margin: 50px auto;
     width: 830px;
-    height: 350px;
+    height: 425px;
     display: flex;
     align-items: center;
 }
 
-.registration_form input[type="text"]{
-    margin-left: 65px;
-    border: 1px solid #aaaaaa;
-    outline: #e3006a;
-    width: 290px;
-    border-radius: 8px;
-    padding: 5px;
+.register_label{
+    display: block;
+    margin-bottom: 5px;
 }
 
-.registration_form input[type="password"]{
-    margin-left: 10px;
+.register_input{
     border: 1px solid #aaaaaa;
-    border-radius: 8px;
     outline: #e3006a;
-    width: 290px;
+    width: 100%;
+    border-radius: 8px;
     padding: 5px;
 }
 
@@ -634,6 +629,61 @@ tbody{
     width: 175px;
 }
 
+.recap_panier{
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 80vw;
+}
 
+.recap_entete{
+    padding-bottom: 5px;
+}
+
+.recap_panier .panier{
+    background-color: #eeeeee;
+    min-height: 75px;
+    border-radius: 8px;
+}
+
+.presentation h2{
+    margin: 10px 0;
+}
+
+.presentation p:nth-child(3){
+    margin-top: 20px !important;
+}
+
+.herobt{
+    padding: 8px;
+    background-color: #e3006a;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.searchbox{
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.searchbar{
+    outline: none;
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.searchbox button{
+    background:none;
+    border: none;
+}
 
 

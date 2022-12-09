@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panier{% endblock %}
+
+{% block javascripts %}<script src="{{ asset('js/scriptpanier.js')}}"></script>{% endblock %}
+
+{% block h1 %}RECAPITULATIF{% endblock %}
+
+{% block affichagPrincipale %}
+    <section class="">
+        <div class="recap_panier">
+            <div class="recap_entete">
+                <h2>Récapitulatif de votre panier</h2>
+            </div>
+            <div class="panier">
+            </div>
+        </div>
+
+        <div class="modalite"></div>
+    </section>
+
+{% endblock %}
+
+{% block ssSection %}
+
+{% endblock %}
+

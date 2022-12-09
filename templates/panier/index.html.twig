@@ -30,9 +30,9 @@
     <section>
         <hr>
         <div class="validation">
-            <form action="" method="post">
+            <form action="{{ path('app_recap_panier') }}" method="post">
                 <input type="hidden" name="liste" id="liste">
-                <a href="billeterie">CONTINUER MES ACHATS</a>
+                <a href="{{ path('app_billeterie') }}">CONTINUER MES ACHATS</a>
                 <button type="submit">FINALISER MES ACHATS</button>
             </form>
         </div>
